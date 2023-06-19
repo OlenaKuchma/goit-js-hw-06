@@ -14,6 +14,7 @@ destroyButton.addEventListener('click', destroyBoxes);
 
 function createBoxes() {
   const amount = +controlsDiv.querySelector('input').value;
+  boxesDiv.innerHTML = '';
   const boxes = [];
 
   for (let i = 0; i < amount; i++) {
@@ -24,7 +25,8 @@ function createBoxes() {
     box.style.backgroundColor = getRandomHexColor();
     boxes.push(box);
   }
-
+  
+  
   boxesDiv.append(...boxes);
 }
 
